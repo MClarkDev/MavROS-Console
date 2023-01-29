@@ -47,9 +47,12 @@ class MavROS:
 
     def dataCallbackImu(self, data):
         self.interface.state.last = time.time()
-        self.interface.state.imuX = data.orientation.x
-        self.interface.state.imuY = data.orientation.y
-        self.interface.state.imuZ = data.orientation.z
+        self.interface.state.imuRx = data.orientation.x
+        self.interface.state.imuRy = data.orientation.y
+        self.interface.state.imuRz = data.orientation.z
+        self.interface.state.imuAx = data.linear_acceleration.x
+        self.interface.state.imuAy = data.linear_acceleration.y
+        self.interface.state.imuAz = data.linear_acceleration.z
 
     def dataCallbackState(self, data):
         self.interface.state.last = time.time()

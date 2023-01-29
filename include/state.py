@@ -4,9 +4,13 @@ class AppState:
 
     last = 0
 
-    imuX = 0
-    imuY = 0
-    imuZ = 0
+    imuRx = 0
+    imuRy = 0
+    imuRz = 0
+
+    imuAx = 0
+    imuAy = 0
+    imuAz = 0
 
     stateMode = ""
     stateArmd = 0
