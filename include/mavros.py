@@ -56,6 +56,7 @@ class MavROS:
         self.interface.state.stateMode = data.mode
         self.interface.state.stateArmd = data.armed
         self.interface.state.stateGuid = data.guided
+        self.interface.state.stateStat = data.system_status
 
     def dataCallbackBattery(self, data):
         self.interface.state.last = time.time()

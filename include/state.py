@@ -8,9 +8,10 @@ class AppState:
     imuY = 0
     imuZ = 0
 
-    stateMode = 0
+    stateMode = ""
     stateArmd = 0
     stateGuid = 0
+    stateStat = 0
 
     pwrV = 0
     pwrA = 0
@@ -20,6 +21,12 @@ class AppState:
     gpsLon = 0
     gpsAlt = 0
     gpsHdg = 0
+
+    stateMap = [
+        "Unknown", "Booting", "Calibrating",
+        "Standby", "Active", "Critical",
+        "Emergency", "PowerDown", "Termination"
+    ]
 
     def __init__(self):
         return
